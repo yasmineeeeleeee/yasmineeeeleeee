@@ -1,4 +1,4 @@
-/* 範例CSS */
+/* (3)五種不同CSS語法 */
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: lightslategray;
@@ -55,4 +55,3 @@ p#resultMessage {
     text-align:center;
 }
 
-/* 加入更多的 CSS 規則以實現所需的特效 */

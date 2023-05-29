@@ -1,25 +1,21 @@
 function startGame() {
-// 獲取使用者輸入的數字
     var numInput1 = parseInt(document.getElementById("numInput1").value);
     var numInput2 = parseInt(document.getElementById("numInput2").value);
     var numInput3 = parseInt(document.getElementById("numInput3").value);
   
-// 檢查使用者輸入的內容是否有效
+// (5) 檢查使用者輸入的內容是否有效、跳出警告訊息、reset
     if (!isValidInput(numInput1, numInput2, numInput3)) {
         alert("Please enter valid number and please do not repeat them:))");
         resetGame();
         return;
     }
   
-// 生成 3 個得獎號碼（1~10 不重複）
     var winningNum1 = generateRandomNumber(1, 10);
     var winningNum2 = generateRandomNumber(1, 10, winningNum1);
     var winningNum3 = generateRandomNumber(1, 10, winningNum1, winningNum2);
   
-// 比對使用者輸入的數字與得獎號碼
     var matchedCount = countMatchingNumbers(numInput1, numInput2, numInput3, winningNum1, winningNum2, winningNum3);
 
-// 計算使用者輸入的數字與得獎號碼的匹配數量
     function countMatchingNumbers(input1, input2, input3, winning1, winning2, winning3) {
         var matchedCount = 0;
         if (input1 === winning1 || input1 === winning2 || input1 === winning3) {
@@ -36,7 +32,7 @@ function startGame() {
     }
 }
     
-// 顯示中獎訊息
+// (2)顯示中獎訊息[第一名的獎金：十萬元、第二名的獎金：五萬元、第三名的獎金：一萬元]
 function displayResultMessage(matchedCount) {
     var resultMessage = document.getElementById("resultMessage");
     var msg = "";
@@ -53,16 +49,16 @@ function displayResultMessage(matchedCount) {
     
     resultMessage.textContent = msg;
 }
-  
+ 
+// (4)Reset的功能
 function resetGame() {
-// 將輸入的數字和中獎訊息設為空值
+
     document.getElementById("numInput1").value = "";
     document.getElementById("numInput2").value = "";
     document.getElementById("numInput3").value = "";
     document.getElementById("resultMessage").textContent = "";
 }
 
-// 檢查輸入的數字是否在範圍內且不重複
 function isValidInput(num1, num2, num3) {
     if (isNaN(num1) || isNaN(num2) || isNaN(num3)) {
         return false;
@@ -80,7 +76,6 @@ function isValidInput(num1, num2, num3) {
 }
 
 function generateRandomNumber(min, max, exclude1, exclude2) {
-// 生成範圍內的隨機數字（不包括指定的數字）
     var num;
     do {
         num = Math.floor(Math.random() * (max - min + 1)) + min;

@@ -4,8 +4,10 @@
         <title>LOTTERY GAME</title>
         <link rel="stylesheet" type="text/css" href="mystyle.css">
     </head>
+
     <body>
-        <h1 class="neonText">LOTTERY GAME</h1>
+<!--(1)規則講解(1)-->
+        <h1>LOTTERY GAME</h1>
         <h2>The rules are as follow:</h2>
         <p>1. Enter three numbers (ranging from 1 to 10).</p>
         <p>2. Each time the game starts, three winning numbers (ranging from 1 to 10) will be randomly generated without repetition.</p>
@@ -13,10 +15,12 @@
         <p>4. If all numbers match, it is the first prize. If two numbers match, it is the second prize. If one number matches, it is the third prize.</p>
         <br>
         <h2>Please enter 3 numbers (1~10):</h3>
+
         <input type="text" id="numInput1">
         <input type="text" id="numInput2">
         <input type="text" id="numInput3">
         <button onclick="startGame()">DRAW LOTTERY!</button>
+<!--(4)Reset的功能按鈕-->
         <button onclick="resetGame()">RESTART!</button>
         <p id="resultMessage"></p>
         <script src="demo.js"></script>

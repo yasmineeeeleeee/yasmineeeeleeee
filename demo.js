@@ -3,7 +3,7 @@ function startGame() {
     var numInput2 = parseInt(document.getElementById("numInput2").value);
     var numInput3 = parseInt(document.getElementById("numInput3").value);
   
-// (5) 檢查使用者輸入的內容是否有效、跳出警告訊息、reset
+// (5) check if the input numbers are valid, set alert, and reset
     if (!isValidInput(numInput1, numInput2, numInput3)) {
         alert("Please enter valid number and please do not repeat them:))");
         resetGame();
@@ -32,7 +32,7 @@ function startGame() {
     }
 }
     
-// (2)顯示中獎訊息[第一名的獎金：十萬元、第二名的獎金：五萬元、第三名的獎金：一萬元]
+// (2) display congrates messages
 function displayResultMessage(matchedCount) {
     var resultMessage = document.getElementById("resultMessage");
     var msg = "";
@@ -50,7 +50,7 @@ function displayResultMessage(matchedCount) {
     resultMessage.textContent = msg;
 }
  
-// (4)Reset的功能
+// (4) reset
 function resetGame() {
 
     document.getElementById("numInput1").value = "";

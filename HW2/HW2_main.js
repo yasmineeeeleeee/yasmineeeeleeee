@@ -119,7 +119,7 @@ HW2_data.push(HW2_trace5);
 
 let HW2_layout = {
     margin:{
-        t:30
+        t:10
     },
     title:'各隊控球後衛比較'
 };

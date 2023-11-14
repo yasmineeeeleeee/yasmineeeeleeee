@@ -118,10 +118,16 @@ HW2_data.push(HW2_trace4);
 HW2_data.push(HW2_trace5);
 
 let HW2_layout = {
-    margin:{
-        t:10
+    margin: {
+        t: 100
     },
-    title:'各隊控球後衛比較'
+    title: {
+        text: '各隊控球後衛比較',
+        font: {
+            size: 20 // Adjust the title font size as needed
+        },
+        x: 0.5 // Adjust the title position along the x-axis (0.5 means centered)
+    }
 };
 
 Plotly.newPlot(HW2_myGraph, HW2_data, HW2_layout);

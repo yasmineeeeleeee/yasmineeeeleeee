@@ -1,0 +1,208 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>1121｜資料視覺化｜期中作業</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper-->
+			<div id="wrapper">
+
+				<!-- Nav -->
+					<nav id="nav">
+						<a href="#" class="icon solid fa-home"><span>首頁</span></a>
+						<a href="#work1" class="icon solid fa-folder"><span>第一份作業</span></a>
+						<a href="#work2" class="icon solid fa-folder"><span>第二份作業</span></a>
+						<a href="#work3" class="icon solid fa-folder"><span>第三份作業</span></a>
+						<!--<a href="#contact" class="icon solid fa-envelope"><span>Contact</span></a>-->
+						<a href="https://youtube.com/@yasminesdiary8900?si=zYBZU1CehzzY168l" class="icon brands fa-youtube"><span>My Channel!</span></a>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<!-- 首頁-->
+							<article id="home" class="panel intro">
+								<header>
+									<h1>1121｜資料視覺化</h1><br>
+									<h3>資管三 110403027 李晨瑜</h3>
+									<p></p>
+								</header>
+								<a href="#work" class="jumplink pic">
+									<!--span class="arrow icon solid fa-chevron-right"--></span>
+									<img src="images/me.jpg" alt="" />
+								</a>
+							</article>
+						<!-- 第一份作業 -->
+							<article id="work1" class="panel">
+								<header>
+									<h2>第一份作業｜Line Chart</h2>
+								</header>
+
+								<h3>
+									🍔大麥克指數🍔
+								</h3>
+								<div id="HW1_myGraph"></div>
+								<h3>
+									背景介紹
+								</h3>
+								<p>
+									幾年前麥當勞在我的認知中，只是個賣很好吃卻不健康餐點的地方，但是當我得知大麥克在各國的價格能夠反映出各國的經濟水準時，我感到驚訝不已，它已成為一個綜合指標，其中包括失業率、通脹率、生產力等多方面因素。<br>
+									我從Kaggle找了一份麥當勞大麥克各國的價格，並在亞洲、南美洲、歐洲各選了一個國家，分別是臺灣、烏拉圭、瑞士。<br>
+									資料來源：https://www.kaggle.com/datasets/paultimothymooney/the-economists-big-mac-index
+								</p>
+								<h3>
+									製作方法說明
+								</h3>
+								<p>
+									❶ 清理資料，先在excel上使用過濾來找出資料完整的國家。<br>
+									❷ 留下三個欄位（日期、國家名稱、換算成美金的價格）。<br>
+									❸ 將2004年至2022年的資料一筆一筆寫到 HW1_data.js 中。<br>
+								</p>
+								<h3>
+									洞悉
+								</h3>
+								<p>
+									❶ 我到世界銀行抓取另一份GDP數據，發現 1)香港的數據在上面，但是臺灣並沒有，因此只能從烏拉圭和瑞士比較。 2)發現兩個國家的GDP相差甚遠，從前只是知道瑞士是個極為有錢的國家、南美洲的經濟發展不好，但是將資料視覺化後更為震撼。<br>
+									資料來源：https://data.worldbank.org/indicator/NY.GDP.MKTP.CD?end=2022&start=2004<br>
+									❷ 瑞士的大麥克指數在2011年突然增加了將近$2（美金）。查到的資料顯示2011年歐債危機期間，因為擔心歐元區的各國央行可能破產，各個企業、富豪都將資產存入瑞士銀行，因此瑞士法郎大幅升值，從2010年初到2011年中，瑞士法郎對歐元上漲了44%。<br>
+									❸ 烏拉圭的大麥克指數從2004年至2008年幾乎都是上漲狀態；2008年至2009年下跌了是因為當時的世界金融危機。<br>
+								</p>
+								<h3>
+									設計巧思
+								</h3>
+								<p>
+									❶ 選擇了兩個最能代表麥當勞的紅色和黃色作為瑞士和烏拉圭的大麥克指數。<br>
+									❷ 選擇黑色作為臺灣大麥克指數的顏色是因為臺灣的GDP沒有被記錄出來，有點被孤立的感覺，所以用低調的墨色。
+								</p>
+							</article>
+						<!-- 第二份作業 -->
+							<article id="work2" class="panel">
+								<header>
+									<h2>第二份作業｜Bar Chart</h2>
+								</header>
+								<h3>
+									🏀P League各隊控球後衛大PK🏀
+								</h3>
+								<div id="HW2_myGraph"></div>
+								<h3>
+									背景介紹
+								</h3>
+								<p>
+									我是一個很喜歡看籃球賽的人，從兩年前開始關注台灣的P League。在眾多位置當中，最喜歡看的就是後衛，因為他們很像是一個球隊的大腦，除了自己要有卓越的進攻能力外，更是需要尋找其他隊員的空擋，並傳到最剛好的位置，因此就想要透過數據來比較各個球隊的控球後衛。
+									數據是由P League官方網站而來。<br><br>
+									控球後衛簡介：<br>
+									。新北國王（黃色）｜林書緯、李愷諺<br>
+									。台新夢想家（綠色）｜林俊吉<br>
+									。富邦勇士（藍色）｜周桂羽<br>
+									。攻城師（紫色）｜高國豪<br>
+									<br>資料來源：https://pleagueofficial.com/stat-player/2022-23/2#record<br>
+								</p>
+								<h3>
+									製作方法說明
+								</h3>
+								<p>
+									❶ 蒐集資料：先在官網上找到球員數據。<br>
+									❷ 整理資料：由於每個欄位有不同的單位，像說命中率是百分比、出場次數是次。因此我選擇三個同樣單位，意即可以同時放在一張圖表中的數據，分別是兩分命中率、三分命中率、罰球命中率。<br>
+									❸ 輸入資料：將每項命中率想成上課範例中的動物園，並且將name改成各個後衛的名字、count改成percentage。<br>
+									❹ 圖表呈現：我選擇用上課範例中的第二種方式，不是比較每個控球後衛的各項數據，而是以命中率為大類去比較各個控球後衛。
+								</p>
+								<h3>
+									洞悉
+								</h3>
+								<p>
+									❶ 由於新北國王去年進入冠軍賽，因此我以為兩位控球後衛林書緯及李愷諺（黃色）命中率會都是前三名，結果透過資料視覺化後一目瞭然，發現並不然。我推論比起個人特色，或許是因為更優秀的團隊合作帶他們進入冠軍賽。今年林書豪加入球隊的關係，和林書緯的默契無人能敵，可以特別關注林書緯的表現。順帶一題，他是這週的MVP。<br>
+									❷ 台新夢想家的林俊吉（綠色）的罰球命中率為這五位最高。由於他的年紀是這五位最小的，而且去年是他打職業賽的第三年，就能有如此穩定的表現，前途無限，非常期待他今年的表現。<br>
+									❸ 富邦勇士的周桂羽（藍色）兩分命中率為五位之冠，而且高出不少，也很期待當富邦勇士隊的其他老將退休後，他能帶領富邦勇士繼續打出屬於他們的王朝。<br>
+									❹ 攻城師的高國豪（紫色）的兩分和三分命中率並不是特別突出，或許是因為去年受傷的關係。很期待他今年養傷完後在場上的表現，畢竟他也是超級傳奇人物。<br>
+								</p>
+								<h3>
+									設計巧思
+								</h3>
+								<p>
+									❶ 每個直方圖的顏色都是依照該隊的代表顏色：新北國王的林書緯和李愷諺——黃色、台新夢想家的林俊吉——綠色、富邦勇士的周桂羽——藍色、攻城師的高國豪——紫色。<br>
+									❷ 由於新北國王是我最喜歡的球隊，因此選擇了兩位控球後衛。
+								</p>
+							</article>
+						<!-- 第三份作業 -->
+							<article id="work3" class="panel">
+							<header>
+								<h2>第三份作業｜Pie Chart</h2>
+							</header>
+							<h3>
+								💰10月支出💰
+							</h3>
+							<div id="HW3_myGraph"></div>
+							<h3>
+								背景介紹
+							</h3>
+							<p>
+								從小就很想好好地理財，但從沒有找到適合的方法，所以有點沒效果，因此希望可以透過記帳和每個月回顧培養理財習慣。這是我今年10月的所有支出，透過把我的支出視覺化可以幫助我檢視自己的財務狀況，並且在新的一年可以開始設定每年的存款目標。
+							</p>
+							<h3>
+								製作方法說明
+							</h3>
+							<p>
+								由於plotly會將比例自動算好，因此我將10月的支出分門別類地記錄下來，並且將金額和分類打出來，而不是輸入百分比數。
+							</p>
+							<h3>
+								洞悉｜回顧與檢視
+							</h3>
+							<p>
+								食物<br>
+								和其他月份比較，這個月的食物支出比較多一些，改進方法是可以注意每餐的花費。<br><br>
+								飲料<br>
+								最近想要減少喝飲料的次數，但實在困難！希望從下個月開始循序漸進地進步，或許從一個月少花$500開始。<br><br>
+								訂閱費<br>
+								是花在Spotify和iClouds。花得很值得！我的人生不能沒有音樂！<br><br>
+								健身房會費<br>
+								花得值得！但是最近太忙了，導致沒有去非常多次，因此在明年2月到期時，要深思熟慮是否續約。<br><br>
+								服飾<br>
+								我不是一個很常買衣服或鞋子的人，只有在需要衣服或看到非常喜歡的衣服才會購買，剛好這個月有看到適合的，一次買了不少，所以這個分類的支出在這個月看起來很高，但以整年度來說，其實沒有那麼多。因此明年可以變成是訂「年度」的目標，可以更好掌握花在衣服上的支出。<br><br>
+								交通<br>
+								來中央大學讀書之後，發現下山著實不方便，但也省了很多錢，以前高中每個月要花至少$1,280在交通上，現在幾乎不用了！wooohooo<br><br>
+								書籍<br>
+								「三日不讀書，面目可憎」引以為戒，好的投資！<br><br>
+							</p>
+							<h3>
+								反思
+							</h3>
+							<p>
+								開始記帳是件好事！給予自己肯定！不過如果要做得更好的話，可以訂定每個月的存款目標、食衣住行育樂各項的支出預算，對於規劃錢財會更有效。希望透過訂預算、記帳、每個月的回顧可以幫助我存到錢！2024新年新希望：開始好好理財。
+							</p>
+							<h3>
+								設計巧思
+							</h3>
+							<p>
+								我選擇各種粉紅色是因為我很喜歡粉紅色，記帳卻是一件有點麻煩的事，所以希望透過資料視覺化後的舒服度能夠大於記帳的阻力，讓我培養記帳的好習慣。
+							</p>
+							</article>
+					</div>
+
+				<!-- Footer -->
+					<div id="footer">
+						<ul class="copyright">
+							<li>&copy; Untitled.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="https://cdn.plot.ly/plotly-2.24.1.min.js"></script>
+			<script src="HW1/HW1_data.js"></script>
+			<script src="HW1/HW1_main.js"></script>
+			<script src="HW2/HW2_data.js"></script>
+			<script src="HW2/HW2_main.js"></script>
+			<script src="HW3/HW3_data.js"></script>
+			<script src="HW3/HW3_main.js"></script>			
+	</body>
+</html>
